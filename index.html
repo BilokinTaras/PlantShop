@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Nunito:wght@200&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+  
+   <title>Plant Shop</title>
+</head>
+<body>
+   <section class="header">
+      <div class="container">
+         <div class="clearfix">
+         <div class="main">
+         <img src="img/pexels-cottonbro-4503751 1.png" class="main__picture" alt="Рослина">
+         <img src="img/Group 5.png" class="main__logo">
+         </div>
+         <nav class="menu">
+            <ul class="menu__item">
+               <li><img src="img/search 1.svg" alt="Пошук"></li>
+               <li><img src="img/shopping-cart 1.svg" alt="Магазин"></li>
+               <li>
+                  <p>Sign Up</p>
+               </li>
+               <li>
+                  <button>Sign In</button>
+               </li>
+               <li>
+                  <div class="dropdown">
+                  <button class="dropbtn">
+                     Menu
+                     <img src="img/↳Color.svg">
+                  </button>                   
+                        <ul class="dropdown-content">
+                     <li>Element one</li>                  
+                     <li>Element next long</li>                    
+                     <li>Element next</li>                   
+                        </ul>                 
+                  </div>
+               </li>
+            </ul>
+         </nav>
+         </div>
+         <div class="form">
+            <h1>Have questions?</h1>
+            <div class="task">
+            <p class="task__main">Необхідно створити форму зворотньго зв’язку.<br>
+               Для розуміння роботи форми, а саме зміщення label при наборі<br> тексту, рекомендуємо ознайомитися з Google Material Design<br> (https://material.io/components/text-fields).<br>
+               Також створити JS валідацію форми. Ім’я повинно бути мінімум 3<br> символи (не враховуючи порожні). Номер телефону повинен мати<br> маску, задану на дизайні.<br></p>
+               <p class="task__additional">Додаткове завдання: данні форми після відправки автоматично<br> додавати до Google Spreadsheets по API (мову інтеграції можете<br> обрати на свій розсуд).</p>           
+            </div>
+            <form class="register">
+               <label for="Name">Your Name</label><br>
+                  <input type="text" name="Name" required minlength="3" maxlength="10"><br>
+               <label for="Phone">Your Phone</label><br>
+                  <input type="tel" name="tel" id="Phone"><br>
+               <button>Send</button>
+            </form>
+        </div>
+      </div>
+   </section>
+   <section class="karusel clearfiX">
+      <div class="container"> 
+         <div class="card">
+            <div class="card__item">
+            <img src="img/fast 1.png" alt="Карточка">
+            <h2>Мобільна<br> версія</h2>
+            <p>Адаптивну версію верстки потрібно зробити на свій розсуд, так щоб нею 
+               було зручно користуватися на різних девайсах</p>
+         </div>
+         <div class="card__item">
+            <img src="img/fast 1.png" alt="Карточка">
+            <h2>Мобільна<br> версія</h2>
+            <p>Адаптивну версію верстки потрібно зробити на свій розсуд, так щоб нею 
+               було зручно користуватися на різних девайсах</p>
+         </div>
+         <div class="card__item">
+            <img src="img/fast 1.png" alt="Карточка">
+            <h2>Мобільна<br> версія</h2>
+            <p>Адаптивну версію верстки потрібно зробити на свій розсуд, так щоб нею 
+               було зручно користуватися на різних девайсах</p>
+         </div>
+         <div class="card__item">
+            <img src="img/fast 1.png" alt="Карточка">
+            <h2>Мобільна<br> версія</h2>
+            <p>Адаптивну версію верстки потрібно зробити на свій розсуд, так щоб нею 
+               було зручно користуватися на різних девайсах</p>
+         </div>
+         </div>
+      </div>
+   </section>
+   <section class="maps clearfiX"> 
+      <div class="container">
+         <div class="maps__task">
+            <p>Нижче представлений дизайн Google карти. Тут необхідно підключити API Google Maps і нанести покажчики на координати 
+               (їх можна взяти приблизно). Основне завдання додати кастомні іконки, зазначені на дизайні.
+                Блоки із завданням також потрібно залишити в верстці.</p>
+         </div>
+         <div id="map"></div>
+      </div>
+   </section>
+   <section class="Media clearfiX">
+      <div class="container">
+         <div class="video">
+            <div id="player"></div>
+            <iv class="menu_video">
+               <button class="menu_video__item" id="Pause" onclick="stopVideo()">Pause</button>
+               <button class="menu_video__item" id="Play"  onclick="onPlayerReady()">Play</button>
+               <button class="menu_video__item reset" id="RunOff" onclick="RunOffSetMark()">Run off the set mark</button>
+               <input type="number" id="second" value >
+               <p>Необхідно підключити YoutubeAPI, і вставити
+                   будь-яке відео (зліва). Поруч створити кнопки
+                   управління для плеєра.
+                   Третя кнопка управління повинна почати 
+                   воспроізвденіе відео з вказаної в 
+                   полі (startSeconds) секунди.</p>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section class="footering clearfiX">
+      <div class="container">
+         <div class="AboutUs">
+            <hr>
+            <div class="location">
+               <h3>plantku</h3>
+               <aside>
+                  <h4>Plantku House</h4>
+                  <p>Jl. Laksda Adisucipto No.51, Demangan, Kec. Depok,
+                      Kota Yogyakarta, Daerah Istimewa Yogyakarta 55282</p>
+               </aside>
+            </div>
+            <div class="navigation">
+               <aside>
+                  <h4>Menu</h4>
+                  <p>Element one</p>
+                  <p>Element next long</p>
+                  <p>Element next</p>
+               </aside>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <script
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJN6KszVOZJRkgArSMwx2IJUikZ19VeJA&callback=initMap&libraries=&v=weekly"
+   async
+ ></script>
+
+ <script src="interactive.js"></script>
+ <script src="https://unpkg.com/imask"></script>
+ <script src="validation.js"></script>
+</body>
+</html>
