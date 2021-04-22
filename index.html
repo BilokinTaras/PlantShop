@@ -57,12 +57,12 @@
                Також створити JS валідацію форми. Ім’я повинно бути мінімум 3<br> символи (не враховуючи порожні). Номер телефону повинен мати<br> маску, задану на дизайні.<br></p>
                <p class="task__additional">Додаткове завдання: данні форми після відправки автоматично<br> додавати до Google Spreadsheets по API (мову інтеграції можете<br> обрати на свій розсуд).</p>           
             </div>
-            <form class="register">
+            <form class="register" action="https://sheetdb.io/api/v1/vdhade8rgjiiu" method="POST" autocomplete="off" name="submit-to-google-sheet" id="sheetdb-form">
                <label for="Name">Your Name</label><br>
-                  <input type="text" name="Name" required minlength="3" maxlength="10"><br>
+                  <input type="text" name="data[name]" required minlength="3" maxlength="10" id="Name"><br>
                <label for="Phone">Your Phone</label><br>
-                  <input type="tel" name="tel" id="Phone"><br>
-               <button>Send</button>
+                  <input type="tel" name="data[phone]" id="Phone"><br>
+               <button type="submit" name="submit">Send</button>
             </form>
         </div>
       </div>
@@ -158,5 +158,6 @@
  <script src="interactive.js"></script>
  <script src="https://unpkg.com/imask"></script>
  <script src="validation.js"></script>
+ <script src="index.js"></script>
 </body>
 </html>

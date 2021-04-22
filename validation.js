@@ -7,7 +7,8 @@ var Phone = document.getElementById('Phone');
   placeholderChar: ''     // defaults to '_'
 };*/
 var phoneMask = IMask(Phone, {
-  mask: '+{380} 00 000 00 00',
+  mask: '+{380}000000000',
+  maxLength: 5,
   lazy: false,  // make placeholder always visible
   placeholderChar: '_'     // defaults to '_'
 });
